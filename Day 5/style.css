@@ -1,0 +1,159 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Poppins';
+    list-style: none;
+    text-decoration: none;
+}
+nav {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A9C6C;
+    /* height: 40px; */
+}
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px 50px;
+}
+.logo > img {
+    width:auto;
+    height: 60px;
+}
+.nav-items{
+    display: inline-block;
+    padding-left: 50px;
+}
+li > a{
+    color: white;
+}
+li{
+    padding-left: 20px;
+    display: inline-block;
+    color: white;
+}
+main{
+    background-color: #4A9C6C;
+    width: 100%;
+    height: 78.9vh;
+    position: relative;
+}
+.image{
+    height: 500px;
+    background-image: url(/img/raja-athletic-club-vs-difa-hassani-del-jadida-12-1652789174.jpeg);
+    background-repeat: no-repeat;
+}
+.content{
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    width: 500px;
+    height: 300px;
+    top: 7rem;
+    right: 12rem;
+    float: right;
+    align-items: center;
+    z-index: 1000;
+}
+.hero{
+    align-items: center;
+    padding: 50px 49px;
+}
+.para{
+    padding-top: 14px;
+    font-size:.8em ;
+    color: grey;
+}
+.tagline{
+    text-decoration: underline #4a9c6cbd ;
+}
+.button{
+    position: absolute;
+    z-index: 1100;
+    bottom: -19px;
+    right: 9rem;
+}
+.btn {
+    background-color: #4A9C6C;
+    padding: 13px 40px;
+    border: none;
+    color: white;
+    box-shadow: 10px 3px 8px 4px #88888846;
+}
+.opacity{
+    background-color: #4a9c6c8c;
+    height: 300px;
+    position: absolute;
+    width: 120px;
+    top: 7rem;
+    right: 43.2rem;
+    z-index: 1300;
+}
+
+.svg{
+    overflow: hidden;
+   padding-top: 13rem;
+   padding-left: 2rem;
+}
+.svg > svg{
+    background-color: #4A9C6C;
+    width: 25px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.social {
+    position: absolute;
+    right: 2rem;
+    top: 28rem;
+}
+.social > svg{
+    width: 30px;
+}
+.svg1 , .svg2{
+    background-color: #4A9C6C;
+    /* width: 20px; */
+    width: 20px;
+    height: 20px;
+    /* text-align: center; */
+    /* padding: 3px; */
+    /* align-items: center; */
+    /* vertical-align: middle; */
+    border-radius: 50%;
+}
+.svg1 > svg , .svg2 > svg{
+   padding: 1px;
+   margin-left: 1px;
+   width: 90%; 
+}
+section{
+    /* padding-top: 100px;
+    padding-left: 120px; */         
+    display: flex;      
+justify-content: center;
+    /* background-color: #4A9C6C; */
+}
+.card-container{
+    display: flex;
+    width: 80%;
+    padding-top: 120px;
+}
+.card{
+    align-items: center;
+    text-align: center;
+    color: rgb(78, 75, 75);
+    /* color: #4A9C6C; */
+    padding: 10px 40px;
+}
+.title{
+    padding: 10px 0;
+}
+.info > .btn{
+    margin-top: 30px;
+}

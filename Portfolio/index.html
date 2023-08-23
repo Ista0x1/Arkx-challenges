@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <i id="showSidebarIcon" class="f-size30 fa-solid fa-angles-right" style="display: none;"></i>
+
+    <main>
+
+        <div class="sidebar">
+            <div class="bar-header">
+                <div class="d-f">
+                    <a class="white f-size15 " href="#"><i class="fa-solid fa-arrow-left"></i> back to course page</a>
+                    <i id="sideicon" class="f-size20 fa-solid fa-angles-left"></i>
+                </div>
+                <div class="title">
+                    <h3>Full-Stack WEB DEVELOPER</h3>
+                    <div class="d-f">
+                    <div class="progress-border">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="progress-num"><small>80%</small></div>
+                    </div>
+                    <div class="social-media d-f">
+                      <a href="#"><i class="fa-brands fa-github"></i></a>
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-body">
+                <ul>
+                    <li style="padding-top: 15px;" class="li-titles">
+                        <a href="#" class="side-title dropdown-toggle"><i class="light-grey fa-solid fa-caret-up"></i>Intro</a>
+                        <ul class="dropdown hidden ">
+                            <li class="" ><i class="fa-solid fa-book-open"></i><a href="" class="menu-item" data-target="#who" data-content="who-am-i">Who I am</a></li>
+                            <li class="dropdown-items"><i class="fa-solid fa-book-open"></i><a href="" class="menu-item" data-content="my-goal">My Goal</a></li>
+                        </ul>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li style="padding-top: 15px;" class="li-titles">
+                        <a href="#" class="side-title dropdown-toggle"><i class="light-grey fa-solid fa-caret-up"></i>Skills</a>
+                        <ul class="dropdown hidden ">
+                            <li class="" ><i class="fa-solid fa-book-open"></i><a id="programming" href="#" class="menu-item" data-target="#skills" data-content="who-am-i">Programming & Development</a></li>
+                            <li class="dropdown-items"><i class="fa-solid fa-book-open"></i><a href="#" class="menu-item" data-target="#skills2" data-content="my-goal">Platforms & CMS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li style="padding-top: 15px;" class="li-titles">
+                        <a href="#" class="side-title dropdown-toggle"><i class="light-grey fa-solid fa-caret-up"></i>About me</a>
+                        <ul class="dropdown hidden ">
+                            <li class="" ><i class="fa-solid fa-book-open"></i><a href="#" class="menu-item" data-target="#about" data-content="who-am-i">About me</a></li>
+                            <!-- <li class="dropdown-items"><i class="fa-solid fa-book-open"></i><a href="#" class="menu-item" data-content="my-goal"> My Goal</a></li> -->
+                        </ul>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li style="padding-top: 15px;" class="li-titles">
+                        <a href="#" class="side-title dropdown-toggle"><i class="light-grey fa-solid fa-caret-up"></i>Project</a>
+                        <ul class="dropdown hidden ">
+                            <li class="" ><a href="#" data-content="who-am-i"></a></li>
+                            <li class="dropdown-items"><a href="#" class="menu-item" data-target="#project" data-content="my-goal">Project</a></li>
+                        </ul>
+                    </li>
+                    <li style="padding-top: 15px;" class="li-titles">
+                      <a href="#" class="side-title dropdown-toggle"><i class="light-grey fa-solid fa-caret-up"></i>Contact me</a>
+                      <ul class="dropdown hidden ">
+                          <li class="dropdown-items"><a href="#" class="menu-item" data-target="#contact" data-content="my-goal">Contact</a></li>
+                      </ul>
+                  </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div id="particles-js">
+                <div class="content-section" id="who">
+                    <!-- Who Am i -->
+                    <header>
+                        <div class="logo">
+                            <div>
+                            <!-- <img src="unnamed.jpg" alt=""> -->
+                            </div>
+
+                            <h4>ISTA</h4>
+                        </div>
+                        <div class="search">
+                            <button><i class="fa-solid fa-magnifying-glass" ></i></button>
+                            <input type="text" placeholder="search" class="input-search">
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="text">
+                            <h1 class="headline"> Full Stack, Full <span style="color: var(--red);">Passion</span></h1>
+                            <span class="subhead">Your <span style="color: var(--red);"> vision</span>, my <span style="color: var(--red);"> code </span>. Bringing digital dreams to <span style="color: var(--red);"> reality.</span> </span>
+                            <a href="https://wa.me/212623596162"><Button class="hero-btn">Contact me</Button></a>
+                        </div>
+                        <div class="image"><img src="undraw_code_thinking_re_gka2.svg" alt=""></div>
+                    </div>
+                    <div class="section-title">
+                        <h1>Things I love</h1>
+                    </div>
+                    <div class="content">
+                        <div class="card">
+                            <div class="image" id="lottie-animation">
+                               <img src="./database-coding.png" alt="">
+                            </div>
+                            <div class="info">
+                                <h1>Backend</h1>
+                                <p>I'm more Backend end focused and love to work with Laravel as well as pure php, javascript.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image" id="lottie-animation">
+                                <img src="./laravel.svg" alt="">
+                            </div>
+                            <div class="info">
+                                <h1 style="padding: 20px 0;">Laravel</h1>
+                                <p>I'm deeply passionate about Laravel. Its elegance and capabilities align perfectly with my backend development style.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image" id="lottie-animation">
+                                <img src="./creative.png" alt="" srcset="">
+                            </div>
+                            <div class="info">
+                                <h1>Creative Coding</h1>
+                                <p>Creative coding lets me blend art with technology. Through it, I turn my ideas into interactive digital masterpieces.</p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+                <div class="content-section hidden" id="skills">
+                    <!-- Who Am i -->
+                    <header>
+                        <div class="logo">
+                            <div>
+                            <!-- <img src="unnamed.jpg" alt=""> -->
+                            </div>
+
+                            <h4>ISTA</h4>
+                        </div>
+                        <!-- <div class="search"> -->
+                            <!-- <button><i class="fa-solid fa-magnifying-glass" ></i></button> -->
+                            <!-- <input type="text" placeholder="search" class="input-search"> -->
+                            <a href="https://wa.me/212623596162"><Button class="hero-btn nav-btn">Hire me</Button></a>
+
+                        <!-- </div> -->
+                    </header>
+                    <div class="content">
+                        <div class="text">
+                            <h1 class="headline" style="font-size: 28px;color: red;"> Programming & Development</h1>
+                            <span class="subhead">Transforming ideas into code and crafting digital experiences </span>
+                        </div>
+                        <div class="hero-image image"><img src="icons.png" alt=""></div>
+                    </div>
+                    <div class="section-title">
+                        <h1>Skills</h1>
+                    </div>
+                    <div class="content">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                
+                            <div class="image" id="lottie-animation">
+                               <img src="./laravel.svg" alt="">
+                            </div>
+                                <div class="info">
+                                    <h1 style="padding: 18px 0;">Php Laravel</h1>
+                                </div>
+                              </div>
+                            <div class="flip-card-back">
+                                <h1>4 </h1>
+                                <h1>Projects</h1>
+                     </div>
+                            </div>
+                            </div>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                  <div class="flip-card-front">
+                                    
+                                <div class="image" id="lottie-animation">
+                                   <img src="./img/design.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h1>Html Css Js</h1>
+
+                                </div>
+                                  </div>
+                                <div class="flip-card-back">
+                                    <h1>8 </h1>
+                                    <h1>Projects</h1>
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        
+                                    <div class="image" id="lottie-animation">
+                                       <img src="./img/database.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h1>Mysql</h1>
+                                    </div>
+                                      </div>
+                                    <div class="flip-card-back">
+                                        <h1>6 </h1>
+                                        <h1>Projects</h1>
+                                                                          </div>
+                                    </div>
+                                    </div>
+                       
+                    </div>
+                    <!-- <div class="content">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <p>PHP & Laravel</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>I have 5 years of experience in PHP & Laravel, having worked on multiple projects including e-commerce websites, content management systems, and API integrations.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <p>PHP & Laravel</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>I have 5 years of experience in PHP & Laravel, having worked on multiple projects including e-commerce websites, content management systems, and API integrations.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <p>PHP & Laravel</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>I have 5 years of experience in PHP & Laravel, having worked on multiple projects including e-commerce websites, content management systems, and API integrations.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                </div> -->
+                </div>
+                <div class="content-section hidden" id="skills2">
+                    <!-- Who Am i -->
+                    <header>
+                        <div class="logo">
+                            <div>
+                            <!-- <img src="unnamed.jpg" alt=""> -->
+                            </div>
+
+                            <h4>ISTA</h4>
+                        </div>
+                        <div class="search">
+                            <button><i class="fa-solid fa-magnifying-glass" ></i></button>
+                            <input type="text" placeholder="search" class="input-search">
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="text">
+                            <h1 class="headline" style="font-size: 28px;color: red;"> Wordpress & Shopify</h1>
+                            <!-- <span class="subhead">Transforming ideas into code and crafting digital experiences </span> -->
+                        </div>
+                        <div class="hero-image image"><img src="./img/undraw_cms_re_asu0.svg" alt=""></div>
+                    </div>
+                    <div class="section-title">
+                        <h1>Skills</h1>
+                    </div>
+                    <div class="content">
+                        <div style="width: 50%;" class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                
+                            <div class="image" id="lottie-animation">
+                               <img src="./img/wordpress.png" alt="">
+                            </div>
+                                <div class="info">
+                                    <h1 style="padding: 18px 0;">Wordpress</h1>
+                                </div>
+                              </div>
+                            <div class="flip-card-back">
+                                <h1>+20 </h1>
+                                <h1>Projects</h1>
+                     </div>
+                            </div>
+                            </div>
+                            <div style="width: 50%;" class="flip-card">
+                                <div class="flip-card-inner">
+                                  <div class="flip-card-front">
+                                    
+                                <div class="image" id="lottie-animation">
+                                   <img src="./img/shopify.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h1>Shopify</h1>
+
+                                </div>
+                                  </div>
+                                <div class="flip-card-back">
+                                    <h1>3 </h1>
+                                    <h1>Projects</h1>
+                                  </div>
+                                </div>
+                                </div>          
+                    </div>
+             
+                </div>
+                <div class="content-section hidden" id="about">
+                  <!-- Who Am i -->
+                  <header>
+                      <div class="logo">
+                          <div>
+                          <!-- <img src="unnamed.jpg" alt=""> -->
+                          </div>
+
+                          <h4>ISTA</h4>
+                      </div>
+                      <div class="search">
+                          <button><i class="fa-solid fa-magnifying-glass" ></i></button>
+                          <input type="text" placeholder="search" class="input-search">
+                      </div>
+                  </header>
+                  <div class="timeline">
+<div class="timeline-container left-container">
+  <div class= "text-box">
+      <h2>High School Diploma</h2>
+<small>2019 - 2020</small>
+<p>In 2020, I reached one of the initial significant milestones in my academic journey by obtaining my high school diploma. </p>
+<span class="left-container-arrow"></span>
+</div>
+</div>
+<div class="timeline-container right-container">
+<div class= "text-box">
+<h2>Software Developer ISTA </h2>
+<small>2020 -2022</small>
+<p>With an unwavering interest in technology, I pursued and successfully earned my Software Developer diploma in 2022. The intensive curriculum gave me hands-on experience with various programming languages, software design principles, and problem-solving methodologies. This educational phase instilled in me a deep understanding of software development and honed my skills, preparing me for the professional world.</p>
+<span class="right-container-arrow"></span>
+</div>
+</div>
+<div class="timeline-container left-container">
+  <div class= "text-box">
+      <h2>First Job as a Software Developer</h2>
+<small>2023-02 2023-07</small>
+<p>Embarking on my professional journey, I secured my first job as a software developer in 2023. Transitioning from an academic setting to the real-world tech industry was an exhilarating experience. With each project, I learned to navigate the challenges of real-world scenarios, collaborating with diverse teams and making meaningful contributions to the company's technology solutions.</p>
+<span class="left-container-arrow"></span>
+</div>
+</div>
+<div class="timeline-container right-container">
+  <div class= "text-box">
+  <h2>ArkX Bootcamp</h2>
+  <small>2023-08 -2024</small>
+
+  <p>To further refine my skill set and stay updated with rapidly evolving tech trends, I enrolled in the esteemed ArkX Bootcamp in August 2023. Here, I am currently exploring advanced tech concepts, networking with industry professionals, and gaining insights that are shaping my future endeavors. This portfolio, a culmination of my learnings and experiences, is a testament to my journey and my dedication towards continuous growth. I'm excited to present it as a reflection of my capabilities and potential during the bootcamp.</p>
+  <span class="right-container-arrow"></span>
+  
+  </div>
+  </div>
+</div>
+           
+              </div>
+              <div class="content-section hidden" id="project">
+                  <!-- Who Am i -->
+                  <header>
+                      <div class="logo">
+                          <div>
+                          <!-- <img src="unnamed.jpg" alt=""> -->
+                          </div>
+
+                          <h4>ISTA</h4>
+                      </div>
+                      <div class="search">
+                          <button><i class="fa-solid fa-magnifying-glass" ></i></button>
+                          <input type="text" placeholder="search" class="input-search">
+                      </div>
+                  </header>
+                  <div class="section-title">
+                    <h1>Projects</h1>
+                </div>
+                  <div class="timeline">
+<div class="timeline-container left-container">
+  <div class= "text-box">
+    <a href="#" target="_blank" rel="noopener noreferrer">  <h2>ISTA GYM</h2>
+      <div class="image">
+         <img src="/img/specialprice.png" alt="" srcset="">
+        </div>
+<!-- <p>In 2020, I reached one of the initial significant milestones in my academic journey by obtaining my high school diploma. </p> -->
+<span class="left-container-arrow"></span>
+</a>
+</div>
+</div>
+<div class="timeline-container right-container">
+<div class= "text-box">
+<a href="http://app.    cherinkargo.com" target="_blank" rel="noopener noreferrer"><h2>Cherin kargo dashboard</h2>
+<div class="image">
+<img src="/img/Web capture_22-8-2023_10951_app.cherinkargo.com.jpeg" alt="" srcset="">
+</div>
+<!-- <p>With an unwavering interest in technology, I pursued and successfully earned my Software Developer diploma in 2022. The intensive curriculum gave me hands-on experience with various programming languages, software design principles, and problem-solving methodologies. This educational phase instilled in me a deep understanding of software development and honed my skills, preparing me for the professional world.</p> -->
+<span class="right-container-arrow"></span>
+</a>
+</div>
+</div>
+<div class="timeline-container left-container">
+  <div class= "text-box">
+      <a href="http://dev.brandingo.net" target="_blank" rel="noopener noreferrer"><h2>Fm2i</h2>
+      <div class="image">
+      <img src="/img/Web capture_22-8-2023_101314_dev.brandingo.net.jpeg" alt="" srcset="">
+    </div>
+<!-- <p>Embarking on my professional journey, I secured my first job as a software developer in 2023. Transitioning from an academic setting to the real-world tech industry was an exhilarating experience. With each project, I learned to navigate the challenges of real-world scenarios, collaborating with diverse teams and making meaningful contributions to the company's technology solutions.</p> -->
+<span class="left-container-arrow"></span>
+</a>
+</div>
+</div>
+<div class="timeline-container right-container">
+  <div class= "text-box">
+  <a href="http://mata3assafar.com" target="_blank" rel="noopener noreferrer"><h2>Mata3 Assafar</h2>
+  <div class="image">
+  <img src="/img/Web capture_22-8-2023_10248_mata3assafar.com.jpeg" alt="" srcset="">
+</div>
+  <!-- <p>To further refine my skill set and stay updated with rapidly evolving tech trends, I enrolled in the esteemed ArkX Bootcamp in August 2023. Here, I am currently exploring advanced tech concepts, networking with industry professionals, and gaining insights that are shaping my future endeavors. This portfolio, a culmination of my learnings and experiences, is a testament to my journey and my dedication towards continuous growth. I'm excited to present it as a reflection of my capabilities and potential during the bootcamp.</p> -->
+  <span class="right-container-arrow"></span>
+</a>
+  </div>
+  </div>
+</div>
+           
+              </div>
+              <div class="content-section hidden" id="contact">
+                <!-- Who Am i -->
+                <header>
+                    <div class="logo">
+                        <div>
+                        <!-- <img src="unnamed.jpg" alt=""> -->
+                        </div>
+
+                        <h4>ISTA</h4>
+                    </div>
+                    <div class="search">
+                        <button><i class="fa-solid fa-magnifying-glass" ></i></button>
+                        <input type="text" placeholder="search" class="input-search">
+                    </div>
+                </header>
+                <section class="ftco-section">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section">Contact Me</h2>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-10 col-md-12">
+                        <div class="wrapper">
+                          <div class="row justify-content-center">
+                            <div class="col-lg-8 mb-5">
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                      <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text">
+                                      <p><span>Address:</span> Casablanca,Morocco</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                      <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text">
+                                      <p><span>Phone:</span> <a href="tel:0623596162">0623596162</a></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                      <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                      <p><span>Email:</span> <a href="mailto:ismailista18@gmail.com">ismailista18@gmail.com</a></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-8">
+                              <div class="contact-wrap">
+                                <h3 class="mb-4 text-center">Get in touch with Me</h3>
+                                <div id="form-message-warning" class="mb-4 w-100 text-center"></div> 
+                                
+                                <form method="POST" action="php/sendEmail.php" id="contactForm" name="contactForm" class="contactForm">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12"> 
+                                      <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <div class="form-group">
+                                        <input type="submit" value="Send Message" class="btn btn-primary">
+                                        <div class="submitting"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+</div>
+
+         
+            </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+ 
+      <script src="particles.js"></script>
+      <script src="app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.9/lottie.min.js" integrity="sha384-+NM3fFdDbwC6Vzg+6JLl6enJhh0AiJbQfGSC2qjXuzzYD6vAN7Tl5p9f6MRXUfP5" crossorigin="anonymous"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.validate.min.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+        particlesJS('particles-js', {
+  particles: {
+    number: {
+      value: 80
+    },
+    color: {
+      value: "#FF3600"
+    },
+    // shape: {
+    //   type: "triangle", // Using triangle shape for particles
+    // },
+    opacity: {
+      value: 1,
+      anim: {
+        enable: true
+      }
+    },
+    size: {
+      value: 4.5,
+      anim: {
+        enable: true,
+        speed: 10,
+        size_min: 0.1
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: '#808080'  // Grey color for linked lines
+    },
+    move: {
+      speed: 3,
+      direction: "random"  // Particles will move in random directions
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse"  // Particles will repel away from the mouse pointer
+      }
+    },
+    modes: {
+      repulse: {
+        distance: 100,
+        duration: 0.4
+      }
+    }
+  }
+});
+      </script>
+ 
+    <script>
+        var animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'), // Using the 'lottie-animation' ID from your .image div
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '2yiuVbJB7t.json' // Replace with the path to your Lottie animation JSON file
+});
+</script>
+<script>
+   $(document).ready(function() {
+    $('.dropdown-toggle').on('click', function(e) {
+        e.preventDefault();
+
+        $(this).toggleClass('active').next('.dropdown').slideToggle(300);
+        $(this).addClass('red');
+        $('.dropdown-toggle').not(this).removeClass('red')
+        var $icon = $(this).find('i');
+        if ($icon.hasClass('fa-caret-down')) {
+            $icon.removeClass('fa-caret-down').addClass('fa-caret-up');
+        } else {
+            $icon.removeClass('fa-caret-up').addClass('fa-caret-down');
+        }
+
+        $('.dropdown-toggle').not(this).removeClass('active').next('.dropdown').slideUp(300).prev().find('i').removeClass('fa-caret-up').addClass('fa-caret-down');
+    });
+    // $('#sideicon').on('click',function(e){
+    //     e.preventDefault();
+    //     $(".sidebar").addClass('hidden').slideToggle(300);
+    // })
+    $('#sideicon').on('click', function() {
+        if ($('.sidebar').is(':visible')) {
+            $('.sidebar').hide(500, function() {
+                $('#showSidebarIcon').show();
+            });
+        }
+    });
+    // $("#programming").on('click' , function(){
+    //     $('#who').addClass('hidden');
+    //     $('#skills').removeClass('hidden');
+    // })
+    $(".menu-item").on('click', function(){
+    // Hide all content sections
+    $('.content-section').addClass('hidden'); 
+    // Show the targeted section
+    var target = $(this).data('target');
+    $(target).removeClass('hidden');
+});
+    $('#showSidebarIcon').on('click', function() {
+        $('.sidebar').show(500, function() {
+            $('#showSidebarIcon').hide();
+        });
+    });
+});
+    </script>
+</body>
+</html>

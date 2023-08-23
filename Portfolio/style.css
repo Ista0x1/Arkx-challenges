@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --bg:#e1e1e1;
+    --white:#ffffff;
+    --red :#FF3600;
+    --h-color:rgba(59,69,78,1.00);
+    --title:#464646;
+    --primary-color:#346ddb;
+    --color-pulsing-primary-inner-0: #346ddbb5;
+    --color-pulsing-primary-inner-99: #91b1f046;
+    --color-pulsing-primary-outer-0: #91b1f01f;
+    --color-pulsing-primary-outer-99: #ecf3ff00;
+    --color-pulsing-scarlet-inner-0: #d33d3db5;
+    --color-pulsing-scarlet-inner-99: #ff918f46;
+    --color-pulsing-scarlet-outer-0: #ff918f26;
+    --color-pulsing-scarlet-outer-99: #ffcccb00;
+}
+.d-f{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+}
+.container{
+    width: 85%;
+    height: 100vh;
+    /* background-color: #346ddb; */
+}
+.f-size15{
+    font-size: 15px;
+}
+.f-size30{
+    font-size: 30px;
+}
+.f-size20{
+    font-size: 20px;
+}
+.sidebar{
+    width: 25%;
+    height: 100vh;
+    position:sticky;
+    top: 0;
+    overflow-x: hidden;
+    overflow: hidden;
+    background-color: var(--white);
+}
+#showSidebarIcon {
+    position: fixed;
+    top: 0px;     /* Add a slight offset from the top for better appearance */
+    left: 0px;
+    font-size: 20px;
+    color: var(--white);
+    padding: 5px;
+    background-color: #FF3600;    /* Add a slight offset from the left for better appearance */
+    z-index: 1000; /* Ensure it's above other elements */
+    cursor: pointer;
+}
+#sideicon{
+    cursor: pointer;
+}
+
+.title {
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 90px;
+    
+    /* background-color: #346ddb; */
+    padding: 50px 20px 9px;
+
+}
+.bar-header{
+    background: var(--red);
+    width: 100%;
+    height: 220px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.white{
+    color: var(--white);
+}
+.blue{
+    color: var(--primary-color);
+}
+.text {
+    font-size: 16px;
+    font-weight: 400;
+}
+h3{
+    font-weight: normal;
+    font-size: 1.50rem;
+}
+.progress-border{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 4px;
+    width: 80%;
+    /* border: 1px solid grey; */
+}
+.hidden{
+    display: none;
+}
+.progress{
+    background: #ffffff;
+    height: inherit;
+    width: 80%;
+}
+.progress-num{
+    padding-top:15px;
+}
+.bar-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.side-title{
+    color: var(--title);
+    font-size: 17px;
+}
+.li-titles{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 22px;
+    padding: 30px 0 15px 25px
+}
+.dropdown {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 16px 18px 16px 13px;
+    width: 100%;
+    color: var(--title);
+    background-color: #f5f5f5;
+}
+.light-grey{
+    padding-right: 8px;
+    color: rgba(173, 170, 170, 0.5);
+}
+.dropdown li {
+    margin-bottom: 5px;
+}
+.dropdown-items{
+    padding-top: 12px;
+}
+.dropdown li a {
+    color: var(--title); 
+    padding-left: 10px;
+    /* padding-top: 18px;  */
+}
+.red{
+    color: var(--red);
+}
+.dbox .text{
+  background-color: var(--white);
+}
+#particles-js {
+    /* position: fixed; */
+    /* z-index: 1; */
+    width: 100%;
+    height: 100vh;
+    /* z-index: -1; Ensure it's behind your content */
+  }
+  header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: #e1e1e1 solid 1px;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  .logo{
+    width: 25%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* justify-content: space-around; */
+  }
+  .logo div{
+    width: 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+
+  }
+  .logo div img{
+    width:100%;
+    aspect-ratio: 2/1.5;
+  }
+  .search{
+   max-width: 225px;
+    /* border: solid 1px #464646; */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding-left: 24px;
+    padding-right: 8px;
+    justify-content: space-between;
+    background-color: rgba(59, 69, 78, 0.1);
+    margin-right: 15px;
+  }
+  .nav-btn{
+    margin-bottom: 100px 100px 0 0;
+  }
+  .social-media{
+    padding-top: 18px;
+    justify-content: center;
+  }
+  .social-media i{
+    color: var(--white);
+    padding-right: 15px;
+    font-size: 18px;
+  }
+.search input:focus{
+    border: none;
+}
+  .search input{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    /* padding: 5px 10px; */
+  }
+  .search  button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: var(--title);
+    padding-right: 10px;
+    /* padding: 0 7px; */
+  }
+  .content{
+    width: 100%;
+    height: 70vh;
+    /* height: 70vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    /* display: block; */
+    padding: 0 20px;
+  }
+  .hero-btn{
+    padding: 14px 25px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    margin-top: 18px;
+    transition: 500ms ease;
+    cursor: pointer;
+
+  }
+  .hero-btn:hover{
+    background-color: var(--white);
+    color: var(--red);
+    font-size: 14px;
+  }
+  .container .image{
+    width: 50%;
+    overflow: hidden;
+  }
+  .content .hero-image img{
+    margin-top: 10px;
+    margin-left: 18px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+  }
+  /* Define a keyframe animation for typing effect */
+@keyframes typingEffect {
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 100%; 
+    }
+}
+
+.headline {
+    font-size: 28px;
+    /* color: red; */
+    white-space: nowrap;     /* Ensure no line breaks in the headline */
+    overflow: hidden;       /* Hide overflowing content */
+    /* border-right: .15em solid red;  */
+    width: 24.9ch;            /* Width set to the number of characters in the headline */
+    animation: 
+        typingEffect 4s steps(24, end),
+        blink-caret .5s step-end infinite alternate;
+}
+
+/* Define a keyframe animation for cursor blinking effect */
+@keyframes blink-caret {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: red; 
+    }
+}
+
+  .image img {
+    width: 100%;
+  }
+  #who ,#skills ,#skills2,#about ,#project,#contact{
+    position: absolute;
+    /* width: 100%; */
+    height: fit-content;
+    
+  }
+  
+  .headline{
+    font-size: 37px;
+    padding-bottom: 22px;
+  }
+  .subhead{
+    font-size: 20px;
+    padding-top: 8px;
+    line-height: 1.7rem;
+  }
+  .card{
+    display: flex;
+    width: 30%;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* Define a keyframe animation for zoom effect */
+/* Define a keyframe animation for zoom effect */
+@keyframes zoomEffect {
+    0%, 80% {
+        transform: scale(1);   /* Image starts and ends at its original size */
+    }
+    50% {
+        transform: scale(1.1); /* Midway through the animation, the image enlarges slightly */
+    }
+}
+
+/* Apply the continuous zoom effect */
+.content .image img {
+    animation: zoomEffect 4s infinite; 
+    width: 100%;
+}
+
+  .card .image  {
+    width: 30%;
+    overflow: hidden;
+    /* height: 90px; */
+  }
+  .flip-card-front .image{
+    width: 60% !important;
+  }
+  .flip-card-front .image img{
+    width: 50% !important;
+    height: auto;
+  }
+  .image img{
+    width: 80% ;
+    height: auto;
+  }
+   .info h1{
+    padding: 15px 0;
+    font-size: 24px;
+    color: var(--red);
+  }
+  .section-title{
+    margin-top: 140px;
+    text-align: center;
+    color: var(--red);
+  }
+  /* Style for the overall card */
+.flip-card {
+    background-color: transparent;
+    width: 30%;
+    height: 200px;
+    perspective: 1000px; /* Provides a 3D-positioned element some perspective */
+  }
+  
+  /* Style for the card's container - this will rotate on hover */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* Provides the flip effect */
+    transform-style: preserve-3d; /* Ensures that the flip is in 3D space */
+  }
+  
+  /* Flip the card on hover */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back of the card */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the side that is not facing the user */
+  }
+  
+  /* Style the front side */
+  .flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style and position the back side */
+  .flip-card-back {
+    background-color: var(--red);
+    color: white;
+    transform: rotateY(180deg); /* Position the back side facing away from the user */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.timeline-container{
+  position: relative;
+  padding: 10px 50px;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+  /* background-color: #ff37001e; */
+}
+@keyframes movedown {
+  0%{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) ;
+  }
+}
+.timeline-container:nth-child(1){
+  animation-delay: 0s;
+}
+.timeline-container:nth-child(2){
+  animation-delay: 2s;
+}
+.timeline-container:nth-child(3){
+  animation-delay: 3s;
+}
+.timeline-container:nth-child(4){
+  animation-delay: 4s;
+}
+.timeline-container:nth-child(5){
+  animation-delay: 5s;
+}
+.timeline-container:nth-child(6){
+  animation-delay: 6s;
+}
+
+.text-box{
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+ font-size: 15px;
+ box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+.left-container{
+  left: 0%;
+}
+.right-container{
+  left:50%;
+}
+
+.right-container img{
+  left: -20px;
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: var(--red);
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 6s linear forwards;
+}
+.text-box .image{
+  width: 100%;
+  overflow: hidden;
+}
+.text-box .image img{
+  width: 100%;
+}
+@keyframes moveline{
+  0%{
+    height: 0%;
+  }
+  100%{
+   height: 100%;
+  }
+}
+.text-box small{
+  display:inline-block;
+  margin-bottom: 15px;
+}
+.left-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top:28px;
+  z-index:1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent ;
+  border-left: 15px solid var(--red);
+  right: -15px;
+}
+.right-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top:28px;
+  z-index:1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent ;
+  border-right: 15px solid var(--red);
+  left: -15px;
+}
+@media screen and (max-width:600px) {
+  html ,body{
+    width: 100%;
+    /* overflow: hidden; */
+  }
+  .sidebar{
+    display: none;
+  }
+  .timeline{
+    margin :50px auto;
+  }
+  .timeline::after{
+    left: 31px;
+  }
+  .container{
+    width: 100%;
+    /* padding-left: 80px;
+    padding-right: 25px; */
+  }
+  .timeline-container{
+    width: 100%;
+padding-left: 80px;
+    padding-right: 25px;
+}
+  .text-box{
+    font-size: 13px;
+  }
+  .text-box small{
+   margin-bottom: 10px;
+  }
+  .right-container{
+    left: 0;
+  }
+  .left-container img, .right-container img{
+    left:10px;
+  }
+  .left-container-arrow , .right-container-arrow{
+    border-right: 15px solid var(--red);
+  }
+  header{
+    width: 70%;
+    /* justify-content: center; */
+    overflow-x: hidden;
+  }
+  header{
+    padding: 0;
+    font-size: 10px;
+  }
+  .search{
+    width: 40%;
+    display: none;
+    overflow: hidden;
+  }
+  .content{
+    display: block;
+    width: 80%;
+    font-size: 12px;
+    padding-top: 100px;
+  }
+  .subhead{
+    font-size: 13px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+}
+/* Container */
+.ftco-section {
+  padding: 60px 0;
+}
+
+/* Heading */
+.heading-section {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.btn-primary{
+  color: var(--white);
+}
+
+/* Icons and contact info */
+.dbox {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+
+.icon {
+  background-color: #f8f9fa; /* light grey background for icons */
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.icon span {
+  color: red; /* Making the icons red as per your request */
+}
+
+.text p {
+  margin: 0;
+  padding: 10px;
+}
+
+.text p span {
+  color: red; /* Making the label text red as per your request */
+  font-weight: bold;
+}
+
+/* Contact form */
+.contact-wrap {
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: red; /* Making the placeholder text red as per your request */
+  opacity: 0.7; /* Adjust this for desired transparency */
+}
+
+.form-control:focus {
+  border-color: red;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: red; /* Matching the button with the red theme */
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #b30000; /* Darker red on hover */
+  color: #fff;
+}
+.row{
+  display: flex;
+  justify-content: center;
+}
+.justify-content-center{
+  flex-direction: column;
+}
+form .row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactForm{
+  padding: 20px;
+  background-color: var(--white);
+}
+.ftco-section{
+  width: 80%;
+  text-align: center;
+  margin-left: 200px;
+}
+a{
+  color: var(--title);
+}
+/* Hide the up caret by default */
+/* .fa-caret-up {
+    display: none;
+} */
+
+/* .dropdown-toggle:after {
+    html: ' <i class="fa-solid fa-caret-up"></i>'; 
+} */
