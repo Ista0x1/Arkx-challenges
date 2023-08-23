@@ -52,7 +52,7 @@ main{
 }
 .sidebar{
     width: 25%;
-    height: 100vh;
+    height: 200vh;
     position:sticky;
     top: 0;
     overflow-x: hidden;
