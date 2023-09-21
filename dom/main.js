@@ -123,16 +123,30 @@ function fetchproduct() {
                     <div class="price py-2">
                         <span>${value.price}</span>
                     </div>
-                    <button type="button" class="btn btn-warning font-size-12" data-product-id="${value.id}">Add to Cart</button>
+                    <button class="like" style="color: red; border: none; padding: 5px 10px; margin-left: 10px;">
+                    <i  class="fa-regular fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning font-size-12 addcart" data-product-id="${value.id}">Add to Cart</button>
                 </div>
             </div>
         </div>`;
         
         productContainer.appendChild(divElement);
-        let addToCartButton = divElement.querySelector("button");
+        let addToCartButton = divElement.querySelector(".addcart");
         addToCartButton.addEventListener("click", function() {
             addToCart(value);
         });
+        let likeButton = divElement.querySelector('.like');
+        likeButton.addEventListener('click', function() {
+            const heartIcon = this.querySelector('.fa-heart');
+            console.log('like button clicked');
+        
+            // Toggle heart icon's classes
+            heartIcon.classList.toggle('fa-regular');
+            heartIcon.classList.toggle('fa-solid');
+        });
+        
+        
     });
 }
 let addcard = document.querySelector('.addcard');
@@ -146,9 +160,25 @@ addcard.addEventListener('click',function(){
         updateCartDisplay();
 })
 function addToCart(product) {
+    product.quantity = 1; // add quantity property to the product
     cart.push(product);
     updateCartDisplay();
 }
+
+function totalfunc() {
+    if(cart.length > 0) {
+        count.innerText = cart.length;
+        // Compute total price by multiplying product's price with its quantity
+        let totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
+        console.log(totalPrice);
+        soustotal.innerText = totalPrice;
+    }
+    else {
+        count.innerText = 0;
+        soustotal.innerText = '0';
+    }
+}
+
 
 let count =document.getElementById('cart-count');
 count.innerText =0;
@@ -177,6 +207,8 @@ function updateCartDisplay() {
                     <button class="remove" style="background-color: red; border: none; color: white; padding: 5px 10px; margin-left: 10px;">
                         <i class="fas fa-trash"></i>
                     </button>
+                   
+                    
                 </div>
             </div>
         `;
@@ -186,33 +218,28 @@ function updateCartDisplay() {
         // Event Listener for removing product from cart
         cartItemDiv.querySelector(".remove").addEventListener("click", function() {
             cart.splice(index, 1); // remove the product from cart array
-            cartItemDiv.remove(); // remove the product from DOM
+            cartItemDiv.remove();
+            totalfunc() // remove the product from DOM
         });
     
-        // Event Listeners for quantity control
         let quantityInput = cartItemDiv.querySelector(".quantity-control input");
+
         cartItemDiv.querySelector(".decrease").addEventListener("click", function() {
             if(quantityInput.value > 1) {
                 quantityInput.value = Number(quantityInput.value) - 1;
+                product.quantity = Number(quantityInput.value); // update product's quantity
+                totalfunc(); // update the total price
             }
         });
         cartItemDiv.querySelector(".increase").addEventListener("click", function() {
             quantityInput.value = Number(quantityInput.value) + 1;
+            product.quantity = Number(quantityInput.value); // update product's quantity
+            totalfunc(); // update the total price
         });
         
     });
     
-    if(cart.length > 0) {
-        count.innerText = cart.length;
-        // Compute total price
-        let totalPrice = cart.reduce((total, product) => total + product.price, 0);
-        console.log(totalPrice);
-        soustotal.innerText=totalPrice;
-    }
-    else {
-        count.innerText = 0;
-        soustotal.innerText='0';
-    }
+    totalfunc();
     
 }
 

@@ -1,0 +1,5 @@
+# Ignore the webscraping folder (assuming it's at the root of your repo)
+/webscraping/
+
+# Ignore all node_modules folders, wherever they are
+**/node_modules/
