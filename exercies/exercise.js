@@ -18,4 +18,10 @@ function main() {
 
 main();
 // 2
-
+function CHECK(number) {
+    if(number > 0){
+        if(number % 7 ===0 ){
+            
+        }
+    }
+}
