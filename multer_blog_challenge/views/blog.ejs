@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .blog-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .blog-footer {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+
+        /* Container styling for alignment */
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        /* Button styling */
+        .action-buttons button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .action-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Specific style for delete button */
+        .action-buttons button.delete {
+            background-color: #dc3545;
+        }
+
+        .action-buttons button.delete:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <% if(blog){ %>
+        <div class="blog-title"><%= blog.title%></div>
+        <div class="blog-content">
+           <%= blog.content %>
+        </div>
+        <div class="blog-footer">
+            Posted on: <%= Date.now(); %>
+        </div>
+        <div class="action-buttons">
+            <a href="/blog/update/<%= blog.id %>">
+                <input type="hidden" name="_method" value="PUT">
+                <button type="submit">Modify</button>
+           </a>
+            
+            <form action="/blog/delete" method="post">
+                <input type="hidden" name="id" value="<%=blog.id %>">
+                <button type="submit" class="delete">Delete</button>
+            </form>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>
