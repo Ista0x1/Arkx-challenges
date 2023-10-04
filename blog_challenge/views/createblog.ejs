@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Blog ISTA0x1</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-3.css">
+
+</head> 
+
+<body> 
+    <div style="width: 100%;" class="container">
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center">
+			    <h2 class="heading">DevBlog - all you need about web development</h2>
+			    
+		    </div><!--//container-->
+	    </section>
+        <div class="container">
+            <h2>Create a New Blog Post</h2>
+            
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                .form-container {
+                    max-width: 600px;
+                    margin: 50px auto;
+                    background-color: #fff;
+                    padding: 30px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+        
+                .form-group {
+                    margin-bottom: 20px;
+                }
+        
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                }
+        
+                input[type="text"], textarea, input[type="file"] {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    font-size: 16px;
+                }
+        
+                input[type="file"] {
+                    padding: 5px;
+                }
+        
+                button {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+        
+                button:hover {
+                    background-color: #0056b3;
+                }
+        
+            </style>
+        
+            <% if(blog) { %>
+            <div class="form-container">
+                <form action="/update" method="post" >
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="hidden" name="id" value="<%= blog.id %>">
+                        <input type="text" id="title" name="title" value="<%= blog.title %>" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="content">Content:</label>
+                        <textarea id="content" name="content" rows="5" aria-valuetext="<%= blog.content%>" required></textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="image">Upload Image:</label>
+                        <input type="file" id="image" name="image">
+                    </div>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+ <% }  else { %>
+    <div class="form-container">
+        <form action="/create" method="post" >
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" value="<%= blog.title %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="5"value="<%= blog.content%>" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<% } %>
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="#" target="_blank">Ista smail</a></small>
+       
+    </footer>
+
+</div>
+
+
+</body>
+</html> 
