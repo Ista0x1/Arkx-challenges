@@ -22,11 +22,68 @@
 <body>
     
  
-    
+	<style>
+        /* Style for the dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style for the dropdown button */
+        .dropbtn {
+			background-color: #0e40e6;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style for the dropdown items */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change the color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #0e40e6;
+        }
+    </style>
+
     <div style="width: 100%;" class="container">
+		<div class="dropdown">
+			<button class="dropbtn nav-link-next nav-item nav-link rounded"><%= tr.language %></button>
+			<div class="dropdown-content">
+				<a href="/">English</a>
+				<a href="/ar">عربى</a>
+			</div>
+		</div>
 	    <section class="cta-section theme-bg-light py-5">
 		    <div class="container text-center">
-			    <h2 class="heading">DevBlog - all you need about web development</h2>
+			    <h2 class="heading"><%= tr.hometitle %></h2>
 			    
 		    </div><!--//container-->
 	    </section>
@@ -39,9 +96,9 @@
 					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/<%= b.image %>" alt="image">
 					    <div class="media-body">
 						    <h3 class="title mb-1"><a href="blog-post.html"><%= b.title %></a></h3>
-						    <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">8 comments</a></span></div>
+						    <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">8 <%= tr.comment%></a></span></div>
 						    <div class="intro"><%= b.content %></div>
-						    <a class="more-link" href="/blog/<%= b.id%>">Read more &rarr;</a>
+						    <a class="more-link" href="/blog/<%= b.id%>"><%= tr.readmorebtn %> &rarr;</a>
 					    </div><!--//media-body-->
 				    </div><!--//media-->
 			    </div><!--//item-->
@@ -50,7 +107,7 @@
 			   <% } %> 
 			    
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-next nav-item nav-link rounded" href="/create">Create</a>
+				  <a class="nav-link-next nav-item nav-link rounded" href="/create"><%= tr.createbtn %></a>
 				</nav>
 				
 		    </div>

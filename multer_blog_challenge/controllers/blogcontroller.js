@@ -4,9 +4,44 @@ const passport = require('passport-local');
 const LocalStrategy = require('passport-local');
 const path = require('path');
 const multer =require('multer');
+const i18next = require('i18next');
 const app = express();
 const { blogdb,createOrUpdateBlog ,deleteblog }= require('../Models/blogs');
 const router = express.Router();
+i18next.init({
+    lng: 'en',
+    debug: true,
+    returnObjects: true,
+    resources: {
+      en: {
+        translation: {
+            "home":{
+                "language":"Select language",
+          "greeting": "hello world",
+          "hometitle" : "DevBlog - all you need about web development",
+          "readmorebtn" : "Read More",
+          "comment" : "comments",
+          "createbtn" : "Create"
+            }
+        }
+    },
+        ar:{
+            translation: {
+                "home":{
+                "language":"إختر اللغة",
+                "greeting": "صباح الخير",
+                "hometitle" : "مقالات في البرمجة - كل متحتاجه في عالم البرمجة",
+                "readmorebtn" : "قراءة المزيد",
+                "comment" : "تعليق",
+                "createbtn" : "إنشاء"
+                }
+            }
+        }
+      
+    }
+  });
+const arhome = i18next.t('home',{lng:'ar'});
+const enhome =i18next.t('home',{ lng: 'en'})
 const storage = multer.diskStorage({
     destination: (req,file,cb)=>{
         cb(null,'./public/assets/images/blog');
@@ -19,7 +54,12 @@ const storage = multer.diskStorage({
 const upload = multer({storage : storage})
 router.get('/',async (req,res)=>{
     const blogs = await blogdb();
-    res.render('index',{blogs:blogs})
+
+    res.render('index',{blogs:blogs,tr:enhome})
+})
+router.get('/ar',async (req,res)=>{
+    const blogs = await blogdb();
+    res.render('index',{blogs:blogs,tr:arhome})
 })
 router.get('/create',(req,res)=>{
     res.render('createblog',{blog : false});
