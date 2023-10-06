@@ -15,8 +15,8 @@ i18next.init({
     resources: {
       en: {
         translation: {
-            "home":{
-                "language":"Select language",
+          "home":{
+          "language":"Select language",
           "greeting": "hello world",
           "hometitle" : "DevBlog - all you need about web development",
           "readmorebtn" : "Read More",
