@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Blog ISTA0x1</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-3.css">
+
+</head> 
+
+<body>
+    
+ 
+	<style>
+        /* Style for the dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style for the dropdown button */
+        .dropbtn {
+			background-color: #0e40e6;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style for the dropdown items */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change the color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #0e40e6;
+        }
+
+.maincontent {
+    flex-wrap: nowrap;
+}
+
+.blog-list, .sidebar {
+    padding: 20px;
+}
+
+/* Adjusting the layout for responsive view */
+@media (max-width: 992px) {
+    .maincontent {
+        flex-direction: column;
+    }
+    .blog-list, .sidebar {
+        width: 100%;
+    }
+}
+
+    /* Sidebar */
+    .sidebar {
+        padding-left: 30px;
+    }
+
+    .search-box {
+        margin-bottom: 30px;
+    }
+
+    .search-box input {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .search-box button {
+        padding: 10px 15px;
+        margin-left: 5px;
+    }
+
+    .sidebar-section {
+        margin-bottom: 30px;
+    }
+
+    .sidebar-section h4 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-section ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar-section ul li a {
+        display: block;
+        padding: 8px 0;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sidebar-section ul li a:hover {
+        color: #0e40e6;
+    }
+</style>
+
+    <div style="width: 100%;" class="container">
+		<div class="dropdown">
+			<button class="dropbtn nav-link-next nav-item nav-link rounded"><%= tr.language %></button>
+			<div class="dropdown-content">
+				<a href="/">English</a>
+				<a href="/ar">عربى</a>
+			</div>
+		</div>
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center">
+			    <h2 class="heading"><%= tr.hometitle %></h2>
+			    
+		    </div><!--//container-->
+	    </section>
+        <div class="maincontent d-flex">
+        <section class="blog-list col-md-8 px-3 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">  <!-- Main Content -->
+        
+				<% if(blogs){ %>
+					<% blogs.forEach(b => { %>
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/<%= b.image %>" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="blog-post.html"><%= b.title %></a></h3>
+						    <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">8 <%= tr.comment%></a></span></div>
+						    <div class="intro"><%= b.content %></div>
+						    <a class="more-link" href="/blog/<%= b.id%>"><%= tr.readmorebtn %> &rarr;</a>
+					    </div><!--//media-body-->
+				    </div><!--//media-->
+			    </div><!--//item-->
+			   <!--//item-->
+			   <% }) %>
+			   <% } %> 
+			    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-next nav-item nav-link rounded" href="/create"><%= tr.createbtn %></a>
+				</nav>
+				
+		    </div>
+	    </section>
+	    <aside class="sidebar col-md-4">
+            <!-- Search Bar -->
+            <form action="/search" method="get">
+            <div class="search-box d-flex" >
+                <input type="text" placeholder="Search..." />
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+            <!-- Categories -->
+            <section class="sidebar-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="/sport">Sport</a></li>
+                    <li><a href="/tech">Tech</a></li>
+                    <li><a href="/news">News</a></li>
+
+                </ul>
+            </section>
+        
+            <!-- Popular Blogs -->
+            <section class="sidebar-section">
+                <h4>Popular Blogs</h4>
+                <ul>
+                    <li><a href="#">Blog Post 1</a></li>
+                    <li><a href="#">Blog Post 2</a></li>
+                    <li><a href="#">Blog Post 3</a></li>
+                    <!-- Add other blog posts as needed -->
+                </ul>
+            </section>
+        </aside>
+        </div>
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+                <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="#" target="_blank">Ista smail</a></small>
+		   
+	    </footer>
+    
+    </div>
+    
+
+</body>
+</html> 
+

@@ -11,32 +11,11 @@ client.connect((err) => {
     }else{
         console.log('Connected to the database');
     }
-  
+  });   
     // Get a reference to the database
-    const db = client.db('products');
-  
+    const db = client.db('products');  
     // Get a reference to a collection
-    collection = db.collection('products');
-  
-    // Insert a document
-    const newUser = {
-      id: 23,
-      name: 'pc',
-      description: 'Sun Skin make your life better',
-      Image: '/assets/kas.jpeg',
-      price: 100,
-      quantity: 0,
-      currency: 'MAD'
-    };
-    
-    collection.insertOne(newUser, (err, result) => {
-      if (err) {
-        console.error('Failed to insert document:', err);
-        return;
-      }
-      console.log('Document inserted:', result.insertedId);
-    });
-  });
+     collection = db.collection('products');
 const port =  3000;
 
 app.use(express.static(__dirname + '/views',{ maxAge:'30d'}));

@@ -1,7 +1,4 @@
 const  express = require('express'); 
-const session = require('express-session');
-const passport = require('passport-local');
-const LocalStrategy = require('passport-local');
 const path = require('path');
 const multer =require('multer');
 const i18next = require('i18next');

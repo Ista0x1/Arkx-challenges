@@ -3,4 +3,5 @@
 
 # Ignore all node_modules folders, wherever they are
 **/node_modules/
+*.pdf
 vue js

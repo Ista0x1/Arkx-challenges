@@ -50,7 +50,6 @@ app.get('/',(req,res)=>{
 })
 app.get('/login',(req,res)=>{
     res.render('login');
-    console.log(users)
 })
 app.post('/register',async (req,res)=>{
     const { name,email,password }= req.body;
